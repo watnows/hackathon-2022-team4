@@ -18,9 +18,9 @@ class ExamsController < ApplicationController
     end
   end
 
-  # def show
-  #   @exam = Exam.find(params[:id])
-  # end
+  def show
+    @exam = Exam.find(params[:id])
+  end
 
   # def edit
   #   @exam = Exam.find(params[:id])

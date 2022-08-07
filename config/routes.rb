@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resource :user
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :exams, only: [:index, :snow, :new, :create]
+  resources :exams, only: [:index, :show, :new, :create]
   # Defines the root path route ("/")
   # root "articles#index"
 
