@@ -144,6 +144,8 @@ GEM
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.2)
+    pg (1.4.2-x64-mingw-ucrt)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -249,13 +251,14 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   orm_adapter (~> 0.5.0)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   rails-i18n
   responders (~> 3.0, >= 3.0.1)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data
