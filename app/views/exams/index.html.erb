@@ -1,22 +1,56 @@
-<%= link_to "新しいレビュー", new_exam_path %>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% @exams.each do |exam| %>
-  <div class= "exam-index-items">
-  <%=link_to(exam.class_name, "/exams/#{exam.id}") %>
-  <%= exam.teacher_name %>
-  <%= exam.examdate %>
-  <% if exam.class_type == 1 %>
-     教養
-  <% elsif exam.class_type == 2 %>
-     専門
-  <% elsif exam.class_type == 3 %>
-    基礎専門
-  <% elsif exam.class_type == 4 %>
-    基礎
-  <% elsif exam.class_type == 5 %>
-    外国語
-  <% elsif exam.class_type == 6 %>
-    教職
-  <%end%>
-  </div>
-<%end%>
+<head>
+  <script>
+      (function(d) {
+          var config = {
+                  kitId: 'sip6tut',
+                  scriptTimeout: 3000,
+                  async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+  </script>
+</head>
+
+<%= stylesheet_link_tag "index/index_style.css", :media => "all" %>
+
+
+<nav class="title">過去問一覧</nav>
+<div class="btn_place">
+  <%= link_to "新しいレビュー", new_exam_path, class: 'button' %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button' %>
+</div>
+<div class="main-info">
+  <% @exams.each do |exam| %>
+    <div class="exam-index-items">
+
+      <div class="class_name data">
+        <h2 class="column">授業名</h2>
+        <%= link_to(exam.class_name, "/exams/#{exam.id}") %>
+      </div>
+      <div class="teacher_name data">
+        <h2 class="column">教師名</h2>
+        <%= exam.teacher_name %>
+      </div>
+      <div class="date data">
+        <h2 class="column">テスト実施日</h2>
+        <%= exam.examdate %>
+      </div>
+      <div class="class_type data">
+        <h2 class="column">授業タイプ</h2>
+        <% if exam.class_type == 1 %>
+          教養
+        <% elsif exam.class_type == 2 %>
+          専門
+        <% elsif exam.class_type == 3 %>
+          基礎専門
+        <% elsif exam.class_type == 4 %>
+          基礎
+        <% elsif exam.class_type == 5 %>
+          外国語
+        <% elsif exam.class_type == 6 %>
+          教職
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

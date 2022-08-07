@@ -4,6 +4,7 @@
 Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile+=%w(login/*)
 Rails.application.config.assets.precompile+=%w(post/*)
+Rails.application.config.assets.precompile+=%w(index/*)
 
 
 # Add additional assets to the asset load path.
