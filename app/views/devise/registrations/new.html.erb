@@ -1,40 +1,50 @@
-<h2>Sign up</h2>
+<div class="body-wrapper">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= image_tag 'login-image_01.webp', id: "left-items" %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
+  <div id="right-items">
+    <h2 class="content title">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field content">
+        <%= f.label :name %> <br>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="field content">
+        <%= f.label :email %> <br>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :faculty %><br />
-    <%= f.select :faculty,[["スポーツ健康科学部",1],["情報理工学部",2]], prompt: "学部を選択してください" %>
-  </div>
+      <div class="field content">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em><br>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="field content">
+        <%= f.label :password_confirmation %> <br>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="field content">
+        <%= f.label :faculty %><br>
+        <%= f.select :faculty, [["スポーツ健康科学部", 1], ["情報理工学部", 2]], prompt: "学部を選択してください" %>
+      </div>
+
+      <div class="actions content">
+        <%= f.submit "Sign up", class: 'button' %>
+      </div>
+      <%= render "devise/shared/links" %>
+
+      </div>
+    <% end %>
+
+    </div>
+
+
