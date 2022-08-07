@@ -16,10 +16,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     user.save
   end
 
-  GET "/resource/edit"
-  def edit
-     super
-  end
+  #GET /resource/edit
+  #def edit
+  #   super
+  #end
 
   # PUT /resource
   # def update
@@ -65,5 +65,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :faculty, :email, :password, :password_confirmation ])
   end
 
-end
-end
+  end
