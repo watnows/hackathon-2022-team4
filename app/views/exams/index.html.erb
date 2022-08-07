@@ -1,7 +1,7 @@
 <%= link_to "新しいレビュー", new_exam_path %>
 <% @exams.each do |exam| %>
   <div class= "exam-index-items">
-  <%=link_to(exam.class_name, "/posts/#{exam.id}") %>
+  <%=link_to(exam.class_name, "/exams/#{exam.id}") %>
   <%= exam.teacher_name %>
   <%= exam.examdate %>
   <% if exam.class_type == 1 %>
