@@ -1,33 +1,44 @@
-<div class="">
-  <h1>投稿</h1>
-</div>
-<%= form_with model: @exam do |f| %>
-<div class="">
-  <%= f.label :class_name,'授業名' %>
-  <%= f.text_field :class_name,placeholder:"授業名を入力してください",size: 40 %>
-</div>
-<div class="">
-<%= f.label :class_type,'授業' %>
-<%= f.select :class_type,[["教養",1],["専門",2],["基礎専門",3],["基礎",4],["外国語",5],["教職",6]], prompt: "教科のタイプを選択してください" %>
-</div>
-<div class="">
-<%= f.label :impression,'感想' %>
-<%= f.text_area :impression,placeholder:"感想を書いてください",size: "40*10" %>
-</div>
-<div class="">
-<%= f.label :content,'内容' %>
-<%= f.text_area :content,placeholder:"内容を書いてください",size: "40*10" %>
-</div>
-<div class="">
-<%= f.label :teacher_name,'先生の名前' %>
-<%= f.text_field :teacher_name,placeholder:"先生の名前を書いてください",size: 40 %>
-</div>
-<div class="">
-<%= f.label :examdate,'テストの日付' %>
-<%= f.date_select :examdate,placeholder:"テストの日付" %>
-</div>
+<%= stylesheet_link_tag "post/post_style.css", :media => "all" %>
 
 
-<%= f.submit '投稿' %>
-<small id="submit-tip">Please check before posting</small>
-<% end %>
+
+<div class="body-wrapper">
+
+  <%= image_tag 'post-image_01.webp', id: "left-items" %>
+
+  <div id="right-items">
+    <h1 class="content title title-login">投稿</h1>
+
+    <%= form_with model: @exam do |f| %>
+      <ul style="list-style: none; width: 400px">
+        <li class="content">
+          <%= f.label :class_name, '授業名' %>
+          <%= f.text_field :class_name, placeholder: "授業名を入力してください", size: 30 %>
+        </li>
+        <li class="content">
+          <%= f.label :class_type, '授業' %>
+          <%= f.select :class_type, [["教養", 1], ["専門", 2], ["基礎専門", 3], ["基礎", 4], ["外国語", 5], ["教職", 6]], prompt: "教科のタイプを選択してください" %>
+        </li>
+        <li class="content">
+          <%= f.label :impression, '感想' %>
+          <%= f.text_area :impression, placeholder: "感想を書いてください", size: "30*10" %>
+        </li>
+        <li class="content">
+          <%= f.label :content, '内容' %>
+          <%= f.text_area :content, placeholder: "内容を書いてください", size: "30*10" %>
+        </li>
+        <li class="content">
+          <%= f.label :teacher_name, '先生の名前' %>
+          <%= f.text_field :teacher_name, placeholder: "先生の名前を書いてください", size: 30 %>
+        </li>
+        <li class="content">
+          <%= f.label :examdate, 'テストの日付' %>
+          <%= f.date_select :examdate, placeholder: "テストの日付" %>
+        </li>
+
+      </ul>
+      <%= f.submit '投稿', class: 'button' %><br>
+      <small id="submit-tip" style="text-align: center;display: block">※投稿する前に確認してください</small>
+    <% end %>
+  </div>
+</div>
