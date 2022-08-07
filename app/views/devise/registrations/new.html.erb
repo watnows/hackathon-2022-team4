@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -29,19 +29,8 @@
 
   <div class="field">
     <%= f.label :faculty %><br />
-    <%= f.select :faculty, options_for_select(User.faculties.map { |k, _v| [t("activerecord.attributes.user.#{k}"), k] }) %>
-
+    <%= f.select :faculty,[["スポーツ健康科学部",1],["情報理工学部",2]], prompt: "学部を選択してください" %>
   </div>
-
-   <div class="field">
-    <%= f.label :grade %><br />
-    <%= f.select :grade, options_for_select(User.grades.map { |k, _v| [t("activerecord.attributes.user.#{k}"), k] }) %>
-  </div>
-
-    <div class="field">
-      <%= f.label :grade, %><br />
-      <%= f.select :grade,[["一回生",1],["2回生",2],["3回生",3],["4回生",4],["5回生",5],["院一回生",6],["院二回生",7],["院三回生",8],["院四回生",9]], prompt: "教科のタイプを選択してください" %>
-    </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

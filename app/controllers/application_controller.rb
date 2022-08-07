@@ -17,9 +17,9 @@ class ApplicationController < ActionController::Base
     tool_index_path
   end
 
-  protected 
+  # protected 
 
-  # def configure_permitted_parameters
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :faculty, :passward, :password_confirmation, :content_type, [student_attributes: [:age,:grade,:user_id]]])
-  # end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :faculty])
+  end
 end
