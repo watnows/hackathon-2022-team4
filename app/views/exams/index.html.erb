@@ -1,4 +1,5 @@
 <%= link_to "新しいレビュー", new_exam_path %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 <% @exams.each do |exam| %>
   <div class= "exam-index-items">
   <%=link_to(exam.class_name, "/posts/#{exam.id}") %>
