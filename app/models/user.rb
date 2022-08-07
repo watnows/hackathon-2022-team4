@@ -57,4 +57,6 @@ class User < ApplicationRecord
         院3回:9,
         院4回:10
         }
+  
+  has_many :exams
 end
