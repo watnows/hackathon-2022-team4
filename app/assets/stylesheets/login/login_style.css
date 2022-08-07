@@ -1,0 +1,59 @@
+.body-wrapper {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    width: fit-content;
+    border: 0.1px solid #666666;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    box-shadow:
+            0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+            0 5px 6.1px rgba(0, 0, 0, 0.076),
+            0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+            0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+            0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+            0 101px 74px rgba(0, 0, 0, 0.13);
+
+}
+
+#right-items {
+    flex-grow: 1;
+    width: fit-content;
+
+}
+
+#left-items {
+    flex-grow: 1;
+    height: 500px;
+    width: 389px;
+}
+
+.content-box {
+    margin: 0 auto;
+    display: block;
+
+}
+
+form,.title {
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.content {
+    font-family: 'Caveat', cursive;
+    margin: 10px;
+}
+
+
+
+
+.title-login {
+    margin: 20px 0;
+}
+
+.remind-btn {
+    margin: 30px 0;
+}

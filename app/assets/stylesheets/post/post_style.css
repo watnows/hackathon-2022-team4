@@ -1,0 +1,118 @@
+body {
+    background-color: aliceblue;
+}
+
+.body-wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border: 0.1px solid #666666;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    box-shadow:
+            0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+            0 5px 6.1px rgba(0, 0, 0, 0.076),
+            0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+            0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+            0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+            0 101px 74px rgba(0, 0, 0, 0.13);
+
+}
+
+#right-items {
+    padding: 5px;
+    flex-grow: 1;
+    width: 450px;
+    height: fit-content;
+}
+
+#left-items {
+    flex-grow: 1;
+    height: fit-content;
+    width: 389px;
+}
+
+.content-box {
+    margin: 0 auto;
+    display: block;
+
+}
+
+.title {
+    font-size: 40px;
+    text-align: center;
+}
+
+.content {
+    font-family: 'Caveat', cursive;
+    margin: 10px;
+}
+
+.remind-btn {
+    margin: 30px 0;
+}
+
+
+ul li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li.msg {
+    margin-bottom: 40px;
+}
+
+label {
+    margin-right: 10px;
+    width:100px;
+    float: left;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+}
+
+ul {
+    width: 450px;
+    margin: 0;
+}
+
+
+input#button {
+    display: block;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    margin: 30px auto 0;
+}
+
+
+html {
+    background-color: #28505D;
+}
+
+.planePath {
+    stroke: #D9DADA;
+    stroke-width: .1%;
+    stroke-width: .5%;
+    stroke-dasharray: 1% 2%;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.fil1 {
+    fill: #D9DADA;
+}
+
+.fil2 {
+    fill: #C5C6C6;
+}
+
+.fil4 {
+    fill: #9D9E9E;
+}
+
+.fil3 {
+    fill: #AEAFB0;
+}

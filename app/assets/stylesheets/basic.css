@@ -1,54 +1,5 @@
-.body-wrapper {
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    border: 0.1px solid #666666;
-    margin: 50px auto 0;
-    border-radius: 15px;
-    box-shadow:
-            0 1.9px 2.5px rgba(0, 0, 0, 0.057),
-            0 5px 6.1px rgba(0, 0, 0, 0.076),
-            0 10.1px 11.4px rgba(0, 0, 0, 0.086),
-            0 19.2px 19.8px rgba(0, 0, 0, 0.092),
-            0 38.4px 34.8px rgba(0, 0, 0, 0.1),
-            0 101px 74px rgba(0, 0, 0, 0.13);
-
-}
-
-#right-items {
-    padding: 5px;
-    flex-grow: 1;
-    width: 389px;
-
-}
-
-#left-items {
-    flex-grow: 1;
-    height: 500px;
-    width: 389px;
-}
-
-.content-box {
-    margin: 0 auto;
-    display: block;
-
-}
-
-form,.title {
-    text-align: center;
-}
-
-.title {
-    font-size: 40px;
-}
-
-.content {
-    font-family: 'Caveat', cursive;
-    margin: 10px;
-}
-
 .button {
-    margin-top: 10px;
+    margin: 10px;
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 15pt;        /* 文字サイズ */
@@ -77,10 +28,3 @@ a:hover {
     text-decoration: none;
 }
 
-.title-login {
-    margin: 40px 0;
-}
-
-.remind-btn {
-    margin: 30px 0;
-}
