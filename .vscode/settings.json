@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/6132168c-1369-4233-af19-d2a6292e762b/microsoft.web/sites/subscriptions/6132168c-1369-4233-af19-d2a6292e762b/resourceGroups/pastexam/providers/Microsoft.Web/sites/pastexam",
+  "appService.deploySubpath": "."
+}
