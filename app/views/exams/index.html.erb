@@ -1,1 +1,21 @@
 <%= link_to "新しいレビュー", new_exam_path %>
+<% @exams.each do |exam| %>
+  <div class= "exam-index-items">
+  <%=link_to(exam.class_name, "/posts/#{exam.id}") %>
+  <%= exam.teacher_name %>
+  <%= exam.examdate %>
+  <% if exam.class_type == 1 %>
+     教養
+  <% elsif exam.class_type == 2 %>
+     専門
+  <% elsif exam.class_type == 3 %>
+    基礎専門
+  <% elsif exam.class_type == 4 %>
+    基礎
+  <% elsif exam.class_type == 5 %>
+    外国語
+  <% elsif exam.class_type == 6 %>
+    教職
+  <%end%>
+  </div>
+<%end%>
