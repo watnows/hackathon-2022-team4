@@ -1,0 +1,66 @@
+body {
+    background-color: #EFEFEF;
+}
+
+.title {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    font-family: source-han-sans-japanese, sans-serif;
+
+    font-weight: 700;
+
+    font-style: normal;
+
+
+
+    font-size: 40px;
+}
+
+.btn_place {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.main-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.exam-index-items {
+    width: 30vw;
+    height: 30vw;
+    margin: 60px 25px;
+
+    border: 0.1px solid #666666;
+    box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+}
+
+.column.data {
+    padding: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.data {
+    margin: 10px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+h2.column {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
